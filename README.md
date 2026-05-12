@@ -37,7 +37,7 @@ I created a fully automated data pipeline that:
 
 The easiest way to deploy your dashboard is using Streamlit Cloud:
 
-1. **Push to GitHub**: Your repository is already at https://github.com/amit2003dh/NewCoherent.git
+1. **Push to GitHub**: Repository is already at https://github.com/amit2003dh/NewCoherent.git
 2. **Sign up for Streamlit Cloud**: Go to https://streamlit.io/cloud and create an account
 3. **Deploy your app**:
    - Click "New app" in Streamlit Cloud
@@ -50,7 +50,7 @@ The easiest way to deploy your dashboard is using Streamlit Cloud:
    - Use the same PostgreSQL connection string from your `.env` file
 5. **Deploy**: Click "Deploy" and your dashboard will be live
 
-Your dashboard will be available at a URL like `https://your-app-name.streamlit.app`
+Dashboard will be available at a URL like `https://app-name.streamlit.app`
 
 ### Alternative Deployment Options
 
