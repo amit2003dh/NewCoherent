@@ -26,11 +26,48 @@ I created a fully automated data pipeline that:
 
 ## Quick Start
 
-1. **Clone repository**: `git clone https://github.com/yourusername/b2b-hiring-intent-dashboard.git`
+1. **Clone repository**: `git clone https://github.com/amit2003dh/NewCoherent.git`
 2. **Install dependencies**: `pip install -r requirements.txt`
 3. **Configure environment**: Copy `.env.example` to `.env` and add `DATABASE_URL`
 4. **Run locally**: `streamlit run app.py`
-5. **Deploy to Streamlit Cloud** (optional, requires GitHub Actions setup)
+
+## Deployment
+
+### Streamlit Cloud (Recommended)
+
+The easiest way to deploy your dashboard is using Streamlit Cloud:
+
+1. **Push to GitHub**: Your repository is already at https://github.com/amit2003dh/NewCoherent.git
+2. **Sign up for Streamlit Cloud**: Go to https://streamlit.io/cloud and create an account
+3. **Deploy your app**:
+   - Click "New app" in Streamlit Cloud
+   - Connect your GitHub account
+   - Select the `NewCoherent` repository
+   - Select the `main` branch
+   - Set the main file path to `app.py`
+4. **Add environment variables**:
+   - In Streamlit Cloud settings, add your `DATABASE_URL` as a secret
+   - Use the same PostgreSQL connection string from your `.env` file
+5. **Deploy**: Click "Deploy" and your dashboard will be live
+
+Your dashboard will be available at a URL like `https://your-app-name.streamlit.app`
+
+### Alternative Deployment Options
+
+**Docker Deployment**:
+```bash
+# Build Docker image
+docker build -t hiring-intent-dashboard .
+
+# Run container
+docker run -p 8501:8501 --env-file .env hiring-intent-dashboard
+```
+
+**VPS Deployment**:
+- Deploy to any VPS (AWS, DigitalOcean, Linode)
+- Install Python and dependencies
+- Set up PostgreSQL database
+- Run with Streamlit or use systemd for background service
 
 ## Features
 
@@ -260,12 +297,6 @@ python -c "import logging; logging.basicConfig(level=logging.DEBUG); from main_p
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Support
 
-- Email: support@yourcompany.com
-- GitHub Issues: [Create an issue](https://github.com/yourusername/b2b-hiring-intent-dashboard/issues)
-- Documentation: [Wiki](https://github.com/yourusername/b2b-hiring-intent-dashboard/wiki)
-
----
 
 **I built this for B2B sales and marketing teams**
