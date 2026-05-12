@@ -116,7 +116,6 @@ Visit `http://localhost:8501` to view your dashboard!
 1. Push to GitHub repository
 2. Set up Repository Secrets:
    - `DATABASE_URL`: Your PostgreSQL connection string
-   - `GEMINI_API_KEY`: Google Gemini API key (optional)
 
 3. Configure Repository Variables (optional):
    - `MAX_PAGES`: Number of pages to scrape (default: 5)
